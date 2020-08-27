@@ -41,7 +41,7 @@ public class Librarian extends javax.swing.JFrame {
     {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-                con = DriverManager.getConnection("jdbc:mysql://localhost/library", "root", "");
+                con = DriverManager.getConnection("jdbc:mysql://localhost/library","root","");
                 
                  
         } catch (ClassNotFoundException ex) {
