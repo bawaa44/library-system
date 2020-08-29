@@ -32,7 +32,7 @@ public class Login extends javax.swing.JFrame {
     {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/librarymanagement","root","");
+            con = DriverManager.getConnection("jdbc:mysql://localhost/library","root","");
         
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Books.class.getName()).log(Level.SEVERE, null, ex);
@@ -252,8 +252,8 @@ public class Login extends javax.swing.JFrame {
 
                      try {
                             Class.forName("com.mysql.jdbc.Driver");
-                            con = DriverManager.getConnection("jdbc:mysql://localhost/librarymanagement","root","");
-                            String selectQuery = "SELECT * FROM user WHERE username = ? AND password = ? ";
+                            con = DriverManager.getConnection("jdbc:mysql://localhost/library","root","");
+                            String selectQuery = "SELECT * FROM users WHERE username = ? AND password = ? ";
                             PreparedStatement pst = con.prepareStatement(selectQuery);
                             pst.setString(1,username);
                             pst.setString(2,pass);
